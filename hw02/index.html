@@ -153,7 +153,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      資料集的訓練一直是機器學習很重要的一個任務，可以讓模型不斷學習資料的特徵，這算是我的第一次實作，感覺很新鮮，也很有趣，透過第一次的simple baseline簡單訓練一次，再透過第二次的medium baseline做加強的訓練，讓我學習到了更多資料訓練的語法還有操作。
     </div>
   </div>
 
@@ -171,17 +171,33 @@
           <td rowspan="4" id="myTotal"></td>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
           <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td>Simple baseline - 預設的訓練設定檔(AICUP_training.json) 訓練/驗證/測試(9/3/3)筆
+訓練：patient0011~0019	九筆
+驗證：patient0048~0050	三筆
+測試：patient0001~0003	三筆
+Colab程式只會從50筆訓練集之中，取其中的15筆來訓練 baseline 模型(3D U-Net)，訓練時間耗時半小時。
+</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
           <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td>Medium baseline - 調整設定檔(AICUP_training.json)增加筆數，訓練/驗證/測試(20/5/5)筆。
+Colab 承重最多訓練/驗證/測試(20/5/5)筆，超過的話會 out of memory。
+請將測試筆數固定設置為patient0001~0005
+將 Colab 上面訓練出來的 Dice 分數結果(如下圖)，截圖並放到作品集網站。
+</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td>Strong baseline - 使用其他模型(例如: Attn U-Net、UNETR、Swin UNETR...等)，對心臟資料進行訓練，並繳交 Colab 程式碼連結到你的 HW02 作品集。
+https://docs.monai.io/en/stable/networks.html#nets
+比賽可以成功訓練出最多的模型數量
+成功訓練出最多的模型數量，名列全班前20名。(1pt)
+成功訓練出最多的模型數量，名列全班前10名。(1pt)
+並將成功訓練出的畫面截圖並放到作品集網站，並說明使用了哪些模型。
+使用15筆資料就可
+</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
@@ -194,16 +210,20 @@
   </div>
 
   <!-- ------------------------------------------------>
-  <div class="row hw12 bottomrow">
-    <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
-    </div>
+<!-- ------------------------------------------------>
+<div class="row hw12">
+  <div class="col-md-12 twenty">
+    <h3>Medium baseline Dice 分數截圖</h3>
+    <img src="screenshot1.png" style="width:100%;max-width:600px;" alt="Dice score screenshot">
   </div>
+</div>
 
-  <!-- ------------------------------------------------>
-
+<div class="row hw12">
+  <div class="col-md-12 twenty">
+    <h3>Strong baseline 模型訓練截圖</h3>
+    <img src="screenshot2.png" style="width:100%;max-width:600px;" alt="Model training screenshot">
+  </div>
+</div>
   <!-- ------------------------------------------------>
 
 
@@ -252,3 +272,4 @@
 
 </body>
 </html>
+
