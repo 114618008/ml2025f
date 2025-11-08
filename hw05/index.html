@@ -153,7 +153,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      這次是第二個AI CUP競賽的訓練集訓練，整體跟HW2類似，不過我覺得這次相比HW2比較簡單，每個指令都更加詳細，也很好理解，因為HW2已經做過一次，所以這次比較熟悉，也期許自己日後多找些例題來訓練，加強自己的實力。
     </div>
   </div>
 
@@ -171,17 +171,28 @@
           <td rowspan="4" id="myTotal"></td>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
           <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td>Simple baseline - 將 Colab 中所有步驟執行完畢，完成訓練 baseline 模型(YOLOv12)。
+訓練完成後，Colab 產生權重檔(best.pt)，檔案5.3MB。
+將上述 baseline 模型權重檔，下載至你的本地端 local 電腦。
+</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
           <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td>Medium baseline - 調整訓練/驗證筆數(總數須為50筆)、 Epochs 或其他訓練參數，得到比 Simple baseline(mAP50 = 0.963) 更高的分數。
+更改參數參考網址 : 
+https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/default.yaml
+將 Colab 上面訓練出來的 mAP50 分數結果(如下圖)，截圖放到作品集網站，並簡單說明如何得到更高的分數。
+</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td>Strong baseline - 使用不同版本、大小的YOLO模型或其他物件偵測模型(例如: YOLOv12m、YOLOv11s、YOLOv9t...等)，進行訓練，並繳交 Colab 程式碼連結到你的 HW05 作品集。
+比賽可以成功訓練出最多的模型數量
+成功訓練出最多的模型數量，名列全班前20名。(1pt)
+成功訓練出最多的模型數量，名列全班前10名。(1pt)
+並將成功訓練出的畫面截圖並放到作品集網站，並說明使用了哪些模型。</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
@@ -194,14 +205,35 @@
   </div>
 
   <!-- ------------------------------------------------>
-  <div class="row hw12 bottomrow">
-    <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
-    </div>
+<div class="row hw12">
+  <div class="col-md-12 twenty">
+    <h3>simple baseline  分數截圖</h3>
+    <img src="HW5_simple_baseline.png" style="width:100%;max-width:600px;" alt="Dice score screenshot">
   </div>
+</div>
 
+<div class="row hw12">
+  <div class="col-md-12 twenty">
+    <h3>mediun baseline  分數截圖 我將epoch調整為，batch調整為32</h3>
+    <img src="HW5_medium_baseline.png" style="width:100%;max-width:600px;" alt="Model training screenshot">
+  </div>
+</div>
+   <!-- ------------------------------------------------>
+<div class="row hw12">
+  <div class="col-md-12 twenty">
+    <h3>strong baseline  分數截圖
+    我使用了三個模型來做訓練，分別是yolov8n、yolov9t、yolov12m</h3>
+
+    <img src="HW5_strong_baseline_yolov8n.png" style="width:100%;max-width:600px;" alt="Dice score screenshot">
+     <img src="HW5_strong_baseline_yolov9t.png" style="width:100%;max-width:600px;" alt="Dice score screenshot">
+     <img src="HW5_strong_baseline_yolov12m.png" style="width:100%;max-width:600px;" alt="Dice score screenshot">
+  </div>
+  </div>
+  </div>
+</div>
+
+
+  <!-- ------------------------------------------------>
   <!-- ------------------------------------------------>
 
   <!-- ------------------------------------------------>
@@ -252,3 +284,4 @@
 
 </body>
 </html>
+
